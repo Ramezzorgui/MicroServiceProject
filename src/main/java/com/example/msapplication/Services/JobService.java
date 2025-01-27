@@ -22,9 +22,7 @@ public class JobService {
         return jobRepository.findById(id);
     }
 
-    public Optional<Job> getJobParNom(String service) {
-        return jobRepository.findByService(service);
-    }
+
 
     public Job modifierEtatJob(int id, boolean etat) {
         Job job = jobRepository.findById(id).orElseThrow(() -> new RuntimeException("Job non trouvé"));
